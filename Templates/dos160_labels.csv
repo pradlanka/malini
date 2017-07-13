@@ -1,0 +1,161 @@
+# From Table S6 of Dosenbach et al., 2010. Prediction of individual brain maturity using fMRI.
+1,vmPFC
+2,aPFC
+3,aPFC
+4,mPFC
+5,aPFC
+6,vmPFC
+7,vmPFC
+8,aPFC
+9,vent aPFC
+10,vent aPFC
+11,vmPFC
+12,vlPFC
+13,vmPFC
+14,ACC
+15,vlPFC
+16,dlPFC
+17,sup frontal
+18,vPFC
+19,ACC
+20,sup frontal
+21,ACC
+22,dlPFC
+23,vPFC
+24,dlPFC
+25,vFC
+26,ant insula
+27,dACC
+28,ant insula
+29,dFC
+30,basal ganglia
+31,mFC
+32,frontal
+33,vFC
+34,dFC
+35,dFC
+36,dFC
+37,vFC
+38,basal ganglia
+39,basal ganglia
+40,vFC
+41,pre-SMA
+42,vFC
+43,SMA
+44,mid insula
+45,frontal
+46,precentral gyrus
+47,thalamus
+48,mid insula
+49,precentral gyrus
+50,parietal
+51,precentral gyrus
+52,precentral gyrus
+53,precentral gyrus
+54,parietal
+55,mid insula
+56,mid insula
+57,thalamus
+58,thalamus
+59,mid insula
+60,temporal
+61,mid insula
+62,parietal
+63,inf temporal
+64,parietal
+65,parietal
+66,parietal
+67,precentral gyrus
+68,temporal
+69,parietal
+70,post insula
+71,basal ganglia
+72,inf temporal
+73,post cingulate
+74,parietal
+75,parietal
+76,post insula
+77,parietal
+78,temporal
+79,post parietal
+80,post cingulate
+81,fusiform
+82,temporal
+83,temporal
+84,fusiform
+85,precuneus
+86,sup parietal
+87,precuneus
+88,IPL
+89,parietal
+90,post cingulate
+91,inf temporal
+92,occipital
+93,post cingulate
+94,precuneus
+95,temporal
+96,IPL
+97,parietal
+98,lat cerebellum
+99,post parietal
+100,sup temporal
+101,IPL
+102,angular gyrus
+103,temporal
+104,IPL
+105,precuneus
+106,occipital
+107,IPL
+108,post cingulate
+109,lat cerebellum
+110,inf cerebellum
+111,post cingulate
+112,precuneus
+113,lat cerebellum
+114,IPS
+115,post cingulate
+116,IPS
+117,angular gyrus
+118,occipital
+119,occipital
+120,med cerebellum
+121,inf cerebellum
+122,inf cerebellum
+123,temporal
+124,angular gyrus
+125,TPJ
+126,occipital
+127,med cerebellum
+128,lat cerebellum
+129,occipital
+130,med cerebellum
+131,inf cerebellum
+132,precuneus
+133,occipital
+134,IPS
+135,occipital
+136,occipital
+137,occipital
+138,med cerebellum
+139,occipital
+140,inf cerebellum
+141,occipital
+142,occipital
+143,med cerebellum
+144,med cerebellum
+145,occipital
+146,occipital
+147,occipital
+148,occipital
+149,occipital
+150,inf cerebellum
+151,inf cerebellum
+152,post occipital
+153,post occipital
+154,post occipital
+155,inf cerebellum
+156,post occipital
+157,post occipital
+158,post occipital
+159,post occipital
+160,post occipital

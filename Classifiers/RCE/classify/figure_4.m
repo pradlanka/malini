@@ -1,0 +1,19 @@
+function [z_data,nsamples,ngenes]= figure_4(data,n_sig_genes,gene_names,s_names,n_samples,maintitle)
+%data: rows are genes, column are samples
+figure
+z_data = zscore(data')';
+z_data = z_data(1:1:n_sig_genes,:);
+
+clustergram(z_data,...
+    'RowLabels',gene_names(1:1:n_sig_genes),...
+    'ColumnLabels',s_names,...
+    'colormap','jet',...
+    'Pdist', 'correlation', ...
+    'Linkage', 'ward', ...
+    'Dimension',2);
+set(gca,'FontSize',8);
+n_samples = length(s_names);
+dummy     = xticklabel_rotate([1:1:n_samples],90,'interpreter','none');
+suptitle(maintitle);
+[nsamples ngenes]=size(z_data')
+fprintf('\nNumber of Samples:%d  Number of Genes:%d\n',nsamples,ngenes);
