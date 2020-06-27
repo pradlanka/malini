@@ -41,6 +41,7 @@ rcervm = get(handles.checkbox74,'Value');
 %rceelm = get(handles.checkbox55,'Value');
 
 loaddata = get(handles.checkbox34,'Value');
+disp('Starting Classification.....');
 if(loaddata==1)
 random_split_proper;
 end
