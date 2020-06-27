@@ -23,7 +23,7 @@ function varargout = work(varargin)
 
 % Edit the above text to modify the response to help work
 
-% Last Modified by GUIDE v2.5 04-Jun-2017 15:02:34
+% Last Modified by GUIDE v2.5 26-Jun-2020 17:57:09
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -42,6 +42,7 @@ if nargout
 else
     gui_mainfcn(gui_State, varargin{:});
 end
+
 % End initialization code - DO NOT EDIT
 
 
@@ -58,10 +59,8 @@ handles.output = hObject;
 
 % Update handles structure
 guidata(hObject, handles);
-
 % UIWAIT makes work wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
-
 
 % --- Outputs from this function are returned to the command line.
 function varargout = work_OutputFcn(hObject, eventdata, handles) 
@@ -80,10 +79,10 @@ function edit1_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 Filepath=pwd;
-data_folder_name=get(hObject,'string');
-handles.folder_name=data_folder_name;
+folder_name=get(hObject,'string');
+handles.folder_name=folder_name;
 guidata(hObject,handles);
-assignin('base','data_folder_name',handles.data_folder_name);
+assignin('base','folder_name',handles.folder_name);
 
 
 
@@ -111,6 +110,7 @@ function browse_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 Filepath=pwd;
 data_folder_name=uigetdir('c:\');
+handles.data_folder_name=data_folder_name;
 set(handles.edit1,'String',data_folder_name);
 %cd(data_folder_name);
 %Groupdir=dir;
@@ -122,7 +122,7 @@ cd(Filepath);
 %handles.folder_name = folder_name;
 %guidata(hObject,handles);
 %addpath(genpath(folder_name));
-%assignin('base','folder_name',handles.folder_name);
+assignin('base','data_folder_name',handles.data_folder_name);
 
 
 %[filename pathname] = uigetfile({'.'}, 'File selector');
@@ -182,7 +182,7 @@ function staticfc_Callback(hObject, eventdata, handles)
 % hObject    handle to staticfc (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-%addpath(genpath('C:\Users\sheshan roy\Documents\MATLAB\gui'))
+%addpath(genpath('C:\Users\xyz\Documents\MATLAB\gui'))
 %a = get(handles.sfc,'Value')
 %if(a == 1)
  %  Controls_together
@@ -198,7 +198,7 @@ function sec_Callback(hObject, eventdata, handles)
 % hObject    handle to sec (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-%addpath(genpath('C:\Users\sheshan roy\Documents\MATLAB\gui'))
+%addpath(genpath('C:\Users\xyz\Documents\MATLAB\gui'))
 %stec = get(handles.time_series,'Value')
 %if(stec == 1)
 %Controls_together
@@ -224,7 +224,7 @@ function dfc_Callback(hObject, eventdata, handles)
 % hObject    handle to dfc (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-%addpath(genpath('C:\Users\sheshan roy\Documents\MATLAB\gui'))
+%addpath(genpath('C:\Users\xyz\Documents\MATLAB\gui'))
 %dyfc = get(handles.dfc,'Value')
 %if(dyfc == 1)
  %Controls_together
@@ -559,7 +559,7 @@ assignin('base','templa',handles.templa);
 end
 % Hints: contents = cellstr(get(hObject,'String')) returns time_series contents as cell array
 %        contents{get(hObject,'Value')} returns selected item from time_series
-%addpath(genpath('C:\Users\sheshan roy\Documents\MATLAB\gui'))
+%addpath(genpath('C:\Users\xyz\Documents\MATLAB\gui'))
 
 %a = get(handles.time_series,'Value')
 %if(a == 1)
@@ -587,7 +587,7 @@ function sfc_Callback(hObject, eventdata, handles)
 % hObject    handle to sfc (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-%addpath(genpath('C:\Users\sheshan roy\Documents\MATLAB\gui'))
+%addpath(genpath('C:\Users\xyz\Documents\MATLAB\gui'))
 %stfc = get(handles.sfc,'Value')
 %if(stfc == 1)
 %Controls_together
@@ -878,11 +878,12 @@ SSP=handles.SSP;
 if exist('YourFile')
 YourFile=handles.YourFile;
 end
-global folder_name;
-folder_name=handles.folder_name;
+% global folder_name;
+% folder_name=handles.folder_name;
 global data_folder_name;
 data_folder_name=get(handles.edit1,'string'); %folder_name = handles.folder_name;
-
+global folder_name;
+folder_name=data_folder_name;
 %if(handles.DSF==1 && handles.HPS==1)
  %set(handles.MADS, 'Enable','On')
 %end
@@ -1826,3 +1827,10 @@ function uibuttongroup7_CreateFcn(hObject, eventdata, handles)
 % hObject    handle to uibuttongroup7 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
+
+
+% --- Executes when figure1 is resized.
+function figure1_SizeChangedFcn(hObject, eventdata, handles)
+% hObject    handle to figure1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
